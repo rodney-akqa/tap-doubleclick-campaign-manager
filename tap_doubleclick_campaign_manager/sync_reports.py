@@ -18,9 +18,9 @@ from tap_doubleclick_campaign_manager.schema import (
 
 LOGGER = singer.get_logger()
 
-MIN_RETRY_INTERVAL = 2 # 10 seconds
-MAX_RETRY_INTERVAL = 600 # 10 minutes
-MAX_RETRY_ELAPSED_TIME = 3600 # 1 hour
+MIN_RETRY_INTERVAL = 4 # 20 seconds
+MAX_RETRY_INTERVAL =  1800 # 30 minutes
+MAX_RETRY_ELAPSED_TIME = 10800 # = 3hrs (1hr=3600)
 CHUNK_SIZE = 16 * 1024 * 1024 # 16 MB
 
 class StreamFunc(object):
